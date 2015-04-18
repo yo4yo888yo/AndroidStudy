@@ -34,12 +34,19 @@ public class CalculatorLogic {
             appendToDispContent( key );
         }
         // クリアキー
-        else if ( key.equals("C") || key.equals("AC") )
+        else if ( key.equals("C") )
+        {
+        	mDisplayPanel.setDispContent( "" );
+        	mDisplayPanel.display();
+        }
+        else if ( key.equals("AC") )
         {
         	mDisplayPanel.setDispContent( "0.0" );
         	mDisplayPanel.display();
             mIsStacked = false;
+        	
         }
+        
         // 演算キー
         else if ( key.equals("+") || key.equals("-") || key.equals("x") || key.equals("÷")
                 || key.equals("=") )
