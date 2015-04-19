@@ -29,8 +29,9 @@ public class MainActivity extends Activity implements OnClickListener
     protected void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
-        // setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
 
+        /*
         // 全体
         LinearLayout layout0 = new LinearLayout( this );
         layout0.setOrientation( LinearLayout.VERTICAL );
@@ -46,11 +47,12 @@ public class MainActivity extends Activity implements OnClickListener
         display.setBackgroundColor( Color.rgb( 0xee, 0xee, 0xee ) );
         display.setGravity( Gravity.RIGHT );
         display.setLayoutParams( new LayoutParams( LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT ) );
-        layout0.addView( display );
+        layout0.addView( display );*/
 
-        mDisplayPanel = new DisplayPanel( display );
+        //mDisplayPanel = new DisplayPanel( display );
         mLogic = new CalculatorLogic( mDisplayPanel );
 
+        /*
         // 電卓ボタン
         TableLayout layout = new TableLayout( this );
 
@@ -82,6 +84,7 @@ public class MainActivity extends Activity implements OnClickListener
             }
             layout.addView( tableRow );
         }
+        */
     }
 
     @Override
