@@ -20,9 +20,6 @@ public class CalculatorLogic {
         mDisplayPanel = (DisplayPanel)displayPanel;
     }
 
-    /*
-     * 演算
-     */
     public void calculate( String key )
     {
         // 数字キー
@@ -48,7 +45,7 @@ public class CalculatorLogic {
         }
         
         // 演算キー
-        else if ( key.equals("+") || key.equals("-") || key.equals("x") || key.equals("÷")
+        else if ( key.equals("+") || key.equals("-") || key.equals("*") || key.equals("/")
                 || key.equals("=") )
         {
             // データがスタック上にあった場合
@@ -59,9 +56,9 @@ public class CalculatorLogic {
                     mStackedValue += resultValue;
                 else if ( mCurrentOp.equals("-") )
                 	mStackedValue -= resultValue;
-                if ( mCurrentOp.equals("x") )
+                if ( mCurrentOp.equals("*") )
                 	mStackedValue *= resultValue;
-                if ( mCurrentOp.equals("÷") )
+                if ( mCurrentOp.equals("/") )
                 	mStackedValue /= resultValue;
                 mDisplayPanel.setDispContent(String.valueOf(mStackedValue));
             }
